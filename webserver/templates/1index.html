@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Load Management Dashboard</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Electric Demand Projection of Delhi</h1>
+        </header>
+        <div class ="search_bar" >
+                <h1>PREDICT  :</h1>
+                    <label for="option">Select :</label>
+                    <select id="dropdown" >
+                        <option value="specifictime">Specific Time</option>
+                        <option value="Timerange">Time Range</option>
+                        <option value="nexthour">Next Hour</option>
+                    </select>
+
+                    <br>
+
+                    <div class="selected" id="Timerange">                        
+                        <label for="date">Start Date</label>
+                        <input type="date" id="sdate" name="date" required>
+                        <br><br>
+              
+                        <label for="date">End Date</label>
+                        <input type="date" id="edate" name="date" required>
+                        <br><br>
+
+                        <button type="submit" id="submitBtn3">Submit</button>
+                        <br><br>
+                    </div>
+
+
+
+                    <div class="selected" id="specifictime">                    
+                        <label for="date">Select Date:</label>
+                        <input type="date" id="spdate" name="date" required>
+                        <br><br>
+                        
+                        <label for="time">Select Time:</label>
+                        <input type="time" id="sptime" name="time" required>
+                        <br><br>
+                        
+                        <button type="submit" id="submitBtn1">Submit</button>
+                        <br><br>
+                    </div>
+
+
+                    <div class="selected" id = "nexthour">
+                        <button type="submit" id="submitBtn2">Submit</button>
+                        
+                    </div>
+        </div>
+
+
+        
+        <h2>Response:</h2>
+        <div id="result"></div>
+        <main>
+            <section>
+                <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=76.39617919921876%2C28.283823966106382%2C77.44812011718751%2C29.00213512458362&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/28.6436/76.9221">View Larger Map</a></small>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Power Load Management System</p>
+        </footer>
+    </div>
+
+    <script>
+        // Get the dropdown and all branch info divs
+        console.log("hi")
+        const branchSelect = document.getElementById('dropdown');
+        const branchInfos = document.querySelectorAll('.selected'); // Assuming branch info divs have a class 'branch-info'
+        branchInfos.forEach(info => {
+                const selectedInfo = document.getElementById(branchSelect.value);
+                if (selectedInfo == specifictime) {
+                    selectedInfo.style.display = 'block';
+                    console.log("Function called"); // Corrected console log
+                }
+            });
+    
+        // Function to show/hide branch information
+        branchSelect.addEventListener('change', function () {
+            const selectedBranch = this.value;
+            console.log("hello")
+    
+            // Hide all branch info sections
+            branchInfos.forEach(info => {
+                info.style.display = 'none';
+                console.log("no block")
+            });
+    
+            
+            const selectedInfo = document.getElementById(selectedBranch);
+            if (selectedInfo) {
+                selectedInfo.style.display = 'block';
+                console.log("Function called"); // Corrected console log
+            }
+        });
+    </script>
+    
+    <script>
+        document.getElementById('submitBtn1').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            var date = document.getElementById('spdate').value;
+            var time = document.getElementById('sptime').value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/specifictime', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) { // Request is complete
+                    if (xhr.status === 200) { // Successful request
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById('result').innerHTML = 
+                            '<p>Date: ' + date + '</p>' +
+                            '<p>Time: ' + time + '</p>' +
+                            '<p>Model Output: ' + response.result + ' Megawatt (MW)</p>';
+                    } else {
+                        document.getElementById('result').innerHTML = 
+                            '<p>Error: ' + xhr.responseText + '</p>';
+                    }
+                }
+            };
+
+            var data = JSON.stringify({ date: date, time: time });
+            xhr.send(data);
+        });
+    </script>
+
+
+    <script>
+        document.getElementById('submitBtn2').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/nexthour', true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) { // Request is complete
+                    if (xhr.status === 200) { // Successful request
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById('result').innerHTML = 
+                            // '<p>Date: ' + date + '</p>' +
+                            // '<p>Time: ' + time + '</p>' +
+                            '<p>Predicted Electricity Requirement: ' + response.result + ' Megawatt (MW)</p>';
+                    } else {
+                        document.getElementById('result').innerHTML = 
+                            '<p>Error: ' + xhr.responseText + '</p>';
+                    }
+                }
+            };
+
+            xhr.send();
+        });
+    </script>
+
+
+<script>
+    document.getElementById('submitBtn3').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        var sdate = document.getElementById('sdate').value;
+        var edate = document.getElementById('edate').value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/rangetime', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) { // Request is complete
+                if (xhr.status === 200) { // Successful request
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById('result').innerHTML = 
+                        '<p>Start Date: ' + sdate + '</p>' +
+                        '<p>End Date: ' + edate + '</p>';
+                    
+                        
+                    response.result.forEach(res => {
+                        var datePara = document.createElement('p');
+                        datePara.innerHTML = '<p>Predicted Electricity Requirement: ' + res + ' Megawatt (MW)</p>';
+                        document.getElementById('result').appendChild(datePara);
+                    })
+                    
+                } else {
+                    document.getElementById('result').innerHTML = 
+                        '<p>Error: ' + xhr.responseText + '</p>';
+                }
+            }
+        };
+
+        var data = JSON.stringify({ date1: sdate, date2: edate });
+        xhr.send(data);
+    });
+</script>
+
+</body>
+</html>

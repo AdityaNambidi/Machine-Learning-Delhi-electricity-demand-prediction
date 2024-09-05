@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     /* background-image: url(/ee2.jpg); */
@@ -8,28 +8,45 @@ body {
     background-position: center;
     background : linear-gradient( #51e2f5,#8458B3)
 }
+
+.search_bar .selected{
+    display:none;
+}
+.search_bar h1{
+    padding: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: #333 2px 2px;
+    font-weight: 900;
+    font-size: 50PX;
+}
+.search_bar select{
+    width: 75%;
+    height:40px ;
+    font-size: 28px;
+    margin: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(69, 69, 69); 
+    background: linear-gradient(white,rgb(226, 226, 255)); 
+}
+.search_bar label{
+    font-size: 28px;
+    color: rgb(42, 42, 42);
+}
 .search_bar{
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-}
-.search_bar .search_logo{
-    color: black;
-    margin-left : 20px;    
-}
-.search_bar input{
-    padding: 0px 20px ;
-    margin: 0px 10px;
+    color: black; 
 }
 .search_bar input{
     border: 1px soild rgb(33, 33, 33);
     border-radius: 6px;
     padding: 5px 10px;
     font-size: 30px;
-    background-image: url(/Ee1.webp);
+    background:linear-gradient(rgb(175, 175, 175),rgb(251, 251, 251),rgb(134, 134, 134));
 }
 
 .container {

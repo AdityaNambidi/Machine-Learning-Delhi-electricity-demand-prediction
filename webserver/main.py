@@ -8,6 +8,11 @@ import os
 app = Flask(__name__)
 APIKEY = "ZB4Y226LCUMVPKCCYVZS63SEG"
 
+
+@app.route("/temp")
+def temp():
+    return render_template("temp.html")
+
 @app.route("/")
 def home():
     return render_template('index.html')
@@ -75,6 +80,7 @@ def range_time():
     prevE = 2833.3958333333335
     _i = 0
     preds = []
+    days = []
     for day in date_list:
         _wd = wdata['days'][_i]
 
@@ -92,12 +98,13 @@ def range_time():
         result = model.predict(inputdata)[0]
         pervE = result
         preds.append(result)
+        days.append(day.day)
 
         _i += 1
     
     print(preds)
     
-    return jsonify({'result': preds})
+    return jsonify({'result': preds, 'days': days})
 
 
 @app.route('/nexthour')
@@ -110,12 +117,16 @@ def next_hour():
 
     april19 = 2833.3958333333335
 
+    nh = now.hour + 1
+    if nh > 23:
+        nh = 0
+
     inputdata = pd.DataFrame({
         'month' : [now.month],
-        'hour' : [now.hour + 1],
-        'temp' : [wdata['days'][0]['hours'][now.hour + 1]['temp']],
-        'wind_speed' : [wdata['days'][0]['hours'][now.hour + 1]['windspeed']],
-        'preasure': [wdata['days'][0]['hours'][now.hour + 1]['pressure']],
+        'hour' : [nh],
+        'temp' : [wdata['days'][0]['hours'][nh]['temp']],
+        'wind_speed' : [wdata['days'][0]['hours'][nh]['windspeed']],
+        'preasure': [wdata['days'][0]['hours'][nh]['pressure']],
         'prev_avg_e': [april19]
 
     })

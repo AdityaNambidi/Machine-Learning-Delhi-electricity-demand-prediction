@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Weather and Electricity Consumption Dashboard</title>
+    <!-- Load Plotly.js and PapaParse for CSV parsing -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <h1>Delhi Weather and Electricity Consumption Dashboard</h1>
+
+    <!-- Div for the 4 combined graphs -->
+    <div id="combinedChart" style="width:100%;height:800px;"></div>
+
+    <script>
+        // Fetch the CSV file from the server
+        fetch('Data4.csv')
+            .then(response => response.text())
+            .then(csvData => {
+                // Parse the CSV data using PapaParse
+                Papa.parse(csvData, {
+                    header: true, // Assuming CSV has headers
+                    dynamicTyping: true, // Convert numeric values to numbers
+                    complete: function(results) {
+                        const parsedData = results.data;
+
+                        // Prepare arrays for plotting
+                        const date = [];
+                        const temperature = [];
+                        const precipitation = [];
+                        const windSpeed = [];
+                        const pressure = [];
+                        const electricityConsumed = [];
+                        const prevAvgE = [];
+
+                        // Loop through each row and extract data
+                        parsedData.forEach(row => {
+                            const dateString = `${row.year}-${row.month}-${row.day} ${row.hour}:00`;
+                            date.push(dateString);
+                            temperature.push(row.temp);
+                            precipitation.push(row.precipitation);
+                            windSpeed.push(row.wind_speed);
+                            pressure.push(row.preasure); // Ensure correct spelling in CSV
+                            electricityConsumed.push(row.electricity_consumed);
+                            prevAvgE.push(row.prev_avg_e);
+                        });
+
+                        // Function to create graphs
+                        function createGraph(data, title, yAxisLabel, lineColor) {
+                            return {
+                                x: date,
+                                y: data,
+                                type: 'scatter',
+                                mode: 'lines',
+                                line: { color: lineColor },
+                                name: title,
+                                xaxis: 'x',
+                                yaxis: 'y',
+                                visible: true
+                            };
+                        }
+
+                        // Create traces for the 4 graphs
+                        const tempTrace = createGraph(temperature, 'Temperature (°C)', 'Temperature (°C)', 'red');
+                        const precipTrace = createGraph(precipitation, 'Precipitation (mm)', 'Precipitation (mm)', 'blue');
+                        const windTrace = createGraph(windSpeed, 'Wind Speed (km/h)', 'Wind Speed (km/h)', 'green');
+                        const pressureTrace = createGraph(pressure, 'Pressure (hPa)', 'Pressure (hPa)', 'purple');
+
+                        // Define initial layout for the 4 plots combined in a grid
+                        const layout = {
+                            grid: { rows: 2, columns: 2, pattern: 'independent' }, // Arrange in 2x2 grid
+                            title: 'Weather and Electricity Overview (Interactive)',
+                            showlegend: true,
+                            xaxis: { title: 'Date/Time', range: ['2017-01-01', '2018-01-01'] },  // No range slider
+                            yaxis: { title: 'Value' },
+                            xaxis2: { title: 'Date/Time', range: ['2017-01-01', '2018-01-01'] },  // No range slider
+                            yaxis2: { title: 'Value' },
+                            xaxis3: { title: 'Date/Time', range: ['2017-01-01', '2018-01-01'] },  // No range slider
+                            yaxis3: { title: 'Value' },
+                            xaxis4: { title: 'Date/Time', range: ['2017-01-01', '2018-01-01'] },  // No range slider
+                            yaxis4: { title: 'Value' }
+                        };
+
+                        // Combine all traces and layout in a single Plotly plot
+                        Plotly.newPlot('combinedChart', [
+                            {...tempTrace, xaxis: 'x', yaxis: 'y'},
+                            {...precipTrace, xaxis: 'x2', yaxis: 'y2'},
+                            {...windTrace, xaxis: 'x3', yaxis: 'y3'},
+                            {...pressureTrace, xaxis: 'x4', yaxis: 'y4'}
+                        ], layout);
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading CSV:', error));
+    </script>
+</body>
+</html>

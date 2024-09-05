@@ -187,7 +187,15 @@
         </div>
 
         <h2>Response:</h2>
-        <div id="result"></div>
+        <div id="result">
+
+            
+
+        </div>
+
+        <!-- <div id="chartContainer" style="width: 100%; margin: 20px 0;">
+            <canvas id="predictionChart"></canvas>
+        </div> -->
 
         <main>
             <section>
@@ -285,15 +293,78 @@
                 if (xhr.readyState === 4) { // Request is complete
                     if (xhr.status === 200) { // Successful request
                         var response = JSON.parse(xhr.responseText);
-                        document.getElementById('result').innerHTML = 
-                            '<p>Start Date: ' + sdate + '</p>' +
-                            '<p>End Date: ' + edate + '</p>';
 
-                        response.result.forEach(res => {
-                            var datePara = document.createElement('p');
-                            datePara.innerHTML = 'Predicted Electricity Requirement: ' + res + ' Megawatt (MW)';
-                            document.getElementById('result').appendChild(datePara);
+                        var graph = document.createElement('div');
+                        graph.id = "chartContainer";
+                        graph.style = "width: 100%; margin: 20px 0;";
+
+                        // Create the canvas element and append it to the div
+                        var canvas = document.createElement('canvas');
+                        canvas.id = 'predictionChart'; // Set the id of the canvas
+                        graph.appendChild(canvas);
+
+                        // Append the graph container (div) to the desired location in the DOM
+                        document.getElementById('result').appendChild(graph);
+                        
+                        
+                        var ctx = document.getElementById('predictionChart').getContext('2d');
+
+                        window.predictionChart = new Chart(ctx, {
+                            type: 'line', // Line graph
+                            data: {
+                                labels: response.days, // X-axis labels (the days)
+                                datasets: [{
+                                    label: 'Electricity Demand (MW)',
+                                    data: response.result, // Y-axis data (electricity predictions)
+                                    borderColor: '#A5C9CA', // Line color matching your palette
+                                    backgroundColor: 'rgba(165, 201, 202, 0.2)', // Light fill color
+                                    fill: true, // Fill under the line
+                                    tension: 0.3, // Line smoothness
+                                    pointBackgroundColor: '#E7F6F2',
+                                    pointBorderColor: '#395B64',
+                                    pointRadius: 4
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Days',
+                                            color: '#E7F6F2',
+                                            font: {
+                                                size: 14
+                                            }
+                                        },
+                                        ticks: {
+                                            color: '#E7F6F2' // X-axis label color
+                                        }
+                                    },
+                                    y: {
+                                        title: {
+                                            display: true,
+                                            text: 'Electricity Demand (MW)',
+                                            color: '#E7F6F2',
+                                            font: {
+                                                size: 14
+                                            }
+                                        },
+                                        ticks: {
+                                            color: '#E7F6F2' // Y-axis label color
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#E7F6F2' // Legend color
+                                        }
+                                    }
+                                }
+                            }
                         });
+
                     } else {
                         document.getElementById('result').innerHTML = 
                             '<p>Error: ' + xhr.responseText + '</p>';
@@ -308,280 +379,3 @@
 
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Load Management Dashboard</title>
-    <link rel="stylesheet" href="./static/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #6d6875;
-            color: #ffcdb2;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #b5838d;
-            border-radius: 8px;
-            color: #fff;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-
-        .search_bar {
-            background-color: #e5989b;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .search_bar h1 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .search_bar label {
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .search_bar input[type="date"], .search_bar input[type="time"], .search_bar select, button {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            background-color: #ffcdb2;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            color: #6d6875;
-        }
-
-        button {
-            background-color: #ffb4a2;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #e5989b;
-        }
-
-        .selected {
-            display: none;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffb4a2;
-        }
-
-        #result {
-            background-color: #6d6875;
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid #ffb4a2;
-        }
-
-        iframe {
-            border-radius: 8px;
-            width: 100%;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #b5838d;
-            color: #fff;
-            border-radius: 8px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Electric Demand Projection of Delhi</h1>
-        </header>
-        <div class="search_bar">
-            <h1>PREDICT :</h1>
-            <label for="option">Select :</label>
-            <select id="dropdown">
-                <option value="specifictime">Specific Time</option>
-                <option value="Timerange">Time Range</option>
-                <option value="nexthour">Next Hour</option>
-            </select>
-
-            <div class="selected" id="Timerange">
-                <label for="sdate">Start Date</label>
-                <input type="date" id="sdate" name="date" required>
-                <label for="edate">End Date</label>
-                <input type="date" id="edate" name="date" required>
-                <button type="submit" id="submitBtn3">Submit</button>
-            </div>
-
-            <div class="selected" id="specifictime">
-                <label for="spdate">Select Date:</label>
-                <input type="date" id="spdate" name="date" required>
-                <label for="sptime">Select Time:</label>
-                <input type="time" id="sptime" name="time" required>
-                <button type="submit" id="submitBtn1">Submit</button>
-            </div>
-
-            <div class="selected" id="nexthour">
-                <button type="submit" id="submitBtn2">Submit</button>
-            </div>
-        </div>
-
-        <h2>Response:</h2>
-        <div id="result"></div>
-
-        <main>
-            <section>
-                <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=76.39617919921876%2C28.283823966106382%2C77.44812011718751%2C29.00213512458362&amp;layer=mapnik"></iframe>
-                <small><a href="https://www.openstreetmap.org/#map=10/28.6436/76.9221">View Larger Map</a></small>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Power Load Management System</p>
-        </footer>
-    </div>
-
-    <script>
-        const branchSelect = document.getElementById('dropdown');
-        const branchInfos = document.querySelectorAll('.selected');
-        
-        branchSelect.addEventListener('change', function () {
-            const selectedBranch = this.value;
-            branchInfos.forEach(info => info.style.display = 'none');
-            document.getElementById(selectedBranch).style.display = 'block';
-        });
-    </script>
-
-<script>
-    document.getElementById('submitBtn1').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
-
-        var date = document.getElementById('spdate').value;
-        var time = document.getElementById('sptime').value;
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/specifictime', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) { // Request is complete
-                if (xhr.status === 200) { // Successful request
-                    var response = JSON.parse(xhr.responseText);
-                    document.getElementById('result').innerHTML = 
-                        '<p>Date: ' + date + '</p>' +
-                        '<p>Time: ' + time + '</p>' +
-                        '<p>Model Output: ' + response.result + ' Megawatt (MW)</p>';
-                } else {
-                    document.getElementById('result').innerHTML = 
-                        '<p>Error: ' + xhr.responseText + '</p>';
-                }
-            }
-        };
-
-        var data = JSON.stringify({ date: date, time: time });
-        xhr.send(data);
-    });
-</script>
-
-
-<script>
-    document.getElementById('submitBtn2').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/nexthour', true);
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) { // Request is complete
-                if (xhr.status === 200) { // Successful request
-                    var response = JSON.parse(xhr.responseText);
-                    document.getElementById('result').innerHTML = 
-                        // '<p>Date: ' + date + '</p>' +
-                        // '<p>Time: ' + time + '</p>' +
-                        '<p>Predicted Electricity Requirement: ' + response.result + ' Megawatt (MW)</p>';
-                } else {
-                    document.getElementById('result').innerHTML = 
-                        '<p>Error: ' + xhr.responseText + '</p>';
-                }
-            }
-        };
-
-        xhr.send();
-    });
-</script>
-
-
-<script>
-document.getElementById('submitBtn3').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent form from refreshing the page
-
-    var sdate = document.getElementById('sdate').value;
-    var edate = document.getElementById('edate').value;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/rangetime', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) { // Request is complete
-            if (xhr.status === 200) { // Successful request
-                var response = JSON.parse(xhr.responseText);
-                document.getElementById('result').innerHTML = 
-                    '<p>Start Date: ' + sdate + '</p>' +
-                    '<p>End Date: ' + edate + '</p>';
-                
-                    
-                response.result.forEach(res => {
-                    var datePara = document.createElement('p');
-                    datePara.innerHTML = '<p>Predicted Electricity Requirement: ' + res + ' Megawatt (MW)</p>';
-                    document.getElementById('result').appendChild(datePara);
-                })
-                
-            } else {
-                document.getElementById('result').innerHTML = 
-                    '<p>Error: ' + xhr.responseText + '</p>';
-            }
-        }
-    };
-
-    var data = JSON.stringify({ date1: sdate, date2: edate });
-    xhr.send(data);
-});
-</script>
-
-    <!-- Additional JavaScript handling your API requests remains unchanged -->
-</body>
-</html> -->

@@ -1,0 +1,44 @@
+day,date,holiday,holiday_type
+Sunday,2024-01-01,New Year's Day,Restricted Holiday
+Saturday,2024-01-13,Lohri,Restricted Holiday
+Sunday,2024-01-14,Makar Sankranti / Pongal,Restricted Holiday
+Wednesday,2024-01-17,Guru Govind Singh's Birthday,Restricted Holiday
+Friday,2024-01-26,Republic Day,Gazetted Holiday
+Wednesday,2024-02-14,Vasant Panchami/Sri Panchami,Restricted Holiday
+Monday,2024-02-19,Shivaji Jayanti,Restricted Holiday
+Saturday,2024-02-24,Guru Ravidas's Birthday,Restricted Holiday
+Tuesday,2024-03-05,Swami Dayananda Saraswati Jayanti,Restricted Holiday
+Friday,2024-03-08,Maha Shivaratri,Restricted Holiday
+Sunday,2024-03-24,Holika Dahana,Restricted Holiday
+Monday,2024-03-25,Holi,Gazetted Holiday
+Friday,2024-03-29,Good Friday,Gazetted Holiday
+Sunday,2024-03-31,Easter Day,Restricted Holiday
+Friday,2024-04-05,Jumat-ul-Wida,Restricted Holiday
+Wednesday,2024-04-10,Idul Fitr,Gazetted Holiday
+Wednesday,2024-04-17,Ram Navami,Gazetted Holiday
+Sunday,2024-04-21,Mahavir Jayanti,Gazetted Holiday
+Wednesday,2024-05-08,Guru Rabindranath's birthday,Restricted Holiday
+Thursday,2024-05-23,Buddha Purnima,Gazetted Holiday
+Monday,2024-06-17,Bakrid / Eid al Adha,Gazetted Holiday
+Sunday,2024-07-07,Rath Yatra,Restricted Holiday
+Wednesday,2024-07-17,Muharram,Gazetted Holiday
+Thursday,2024-08-15,Independence Day,Gazetted Holiday
+Thursday,2024-08-15,Parsi New Year's day,Restricted Holiday
+Monday,2024-08-19,Raksha Bandhan(Rakhi),Restricted Holiday
+Monday,2024-08-26,Janmashtami,Gazetted Holiday
+Sunday,2024-09-08,Vinayaka Chaturthi /Ganesh Chaturthi,Restricted Holiday
+Saturday,2024-09-14,Onam or Thiru onam day,Restricted Holiday
+Monday,2024-09-16,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted Holiday
+Wednesday,2024-10-02,Mahatma Gandhi Jayanti,Gazetted Holiday
+Friday,2024-10-11,Dussehra (Maha Ashtami),Restricted Holiday
+Saturday,2024-10-12,Dussehra (Maha Navmi),Restricted Holiday
+Sunday,2024-10-13,Dussehra,Gazetted Holiday
+Sunday,2024-10-20,Karaka Chaturthi (Karva Chouth),Restricted Holiday
+Thursday,2024-10-31,Diwali (Deepavali),Gazetted Holiday
+Saturday,2024-11-03,Govardhan Puja,Restricted Holiday
+Sunday,2024-11-04,Bhai Duj,Restricted Holiday
+Thursday,2024-11-07,Pratihar Sashthi or Surya Sashthi (Chhat Puja),Restricted Holiday
+Friday,2024-11-15,Guru Nanak's Birthday,Gazetted Holiday
+Friday,2024-12-06,Guru Teg Bahadur's Martyrdom Day,Restricted Holiday
+Tuesday,2024-12-24,Christmas Eve,Restricted Holiday
+Wednesday,2024-12-25,Christmas Day,Gazetted Holiday

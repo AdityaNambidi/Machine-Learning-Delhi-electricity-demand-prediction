@@ -1,0 +1,50 @@
+date,day,holiday,holiday_type
+2020-01-01,Wednesday,New Year's Day (R),Restricted
+2020-01-02,Thursday,Guru Gobind Singh's Birthday (R),Restricted
+2020-01-13,Monday,Lohri (R),Restricted
+2020-01-15,Wednesday,Makar Sankranti/Pongal (R),Restricted
+2020-01-26,Sunday,Republic Day,Gazetted
+2020-01-30,Thursday,Basant Panchami / Sri Panchami (R),Restricted
+2020-02-09,Sunday,Guru Ravidas's Birthday (R),Restricted
+2020-02-18,Tuesday,Swami Dayananda Saraswati Jayanti (R),Restricted
+2020-02-19,Wednesday,Shivaji Jayanti (R),Restricted
+2020-02-21,Friday,Maha Shivaratri (R),Restricted
+2020-03-09,Monday,Holika Dahan/Dolyatra/Hazarat Ali's Birthday (R),Restricted
+2020-03-10,Tuesday,Holi,Gazetted
+2020-03-25,Wednesday,Chaitra Sukladi/Gudi Padava/Ugadi/Cheti Chand (R),Restricted
+2020-04-02,Thursday,Ram Navami,Gazetted
+2020-04-06,Monday,Mahavir Jayanti,Gazetted
+2020-04-10,Friday,Good Friday,Gazetted
+2020-04-12,Sunday,Easter Sunday (R),Restricted
+2020-04-13,Monday,Vaisakhi/Vishu (R),Restricted
+2020-04-14,Tuesday,Mesadi/Vaisakhadi (Bengal)/Bahag Bihu (Assam) (R),Restricted
+2020-05-07,Thursday,Buddha Purnima,Gazetted
+2020-05-08,Friday,Guru Rabindranath's Birthday (R),Restricted
+2020-05-22,Friday,Jamat-Ul-Vida (R),Restricted
+2020-05-25,Monday,Id-ul- Fitr,Gazetted
+2020-06-23,Tuesday,Rath Yatra (R),Restricted
+2020-08-01,Saturday,Id-ul-Zuha (Bakrid),Gazetted
+2020-08-03,Monday,Raksha Bandhan (R),Restricted
+2020-08-11,Tuesday,Janmashtami (Smarta) (R),Restricted
+2020-08-12,Wednesday,Janmashtami,Gazetted
+2020-08-15,Saturday,Independence day,Gazetted
+2020-08-16,Sunday,Parsi New Year's day/ Nauraj (R),Restricted
+2020-08-22,Saturday,Vinayaka Chaturthi/Ganesh Chaturthi (R),Restricted
+2020-08-30,Sunday,Muharram,Gazetted
+2020-08-31,Monday,Onam or Thiru Onam Day (R),Restricted
+2020-10-02,Friday,Mahatma Gandhi's Birthday,Gazetted
+2020-10-23,Friday,Dussehra (Maha Saptami) (Additional) (R),Restricted
+2020-10-24,Saturday,Dussehra (Maha Ashtami) (Maha Navmi) (Additional) (R),Restricted
+2020-10-25,Sunday,Dussehra,Gazetted
+2020-10-26,Monday,"Vijay Dashmi (Bengal, Kerala) (R)",Restricted
+2020-10-30,Friday,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2020-10-31,Saturday,Maharishi Valmiki's Birthday (R),Restricted
+2020-11-04,Wednesday,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2020-11-14,Saturday,Naraka Chaturdasi (R),Restricted
+2020-11-15,Sunday,Govardhan Puja (R),Restricted
+2020-11-16,Monday,Bhai Duj (R),Restricted
+2020-11-20,Friday,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2020-11-24,Tuesday,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2020-11-30,Monday,Guru Nanak's Birthday,Gazetted
+2020-12-24,Thursday,Christmas Eve (R),Restricted
+2020-12-25,Friday,Christmas Day,Gazetted

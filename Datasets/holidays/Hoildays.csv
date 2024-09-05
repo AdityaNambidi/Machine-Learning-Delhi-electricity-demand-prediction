@@ -1,0 +1,316 @@
+date,holiday,holiday_type
+2017-01-26,Republic Day,Gazetted
+2017-02-24,Maha Shivaratri/Shivaratri,Restricted
+2017-03-13,Holi,Gazetted
+2017-04-04,Rama Navami,Gazetted
+2017-04-09,Mahavir Jayanti,Gazetted
+2017-04-14,Good Friday,Gazetted
+2017-05-10,Buddha Purnima/Vesak,Gazetted
+2017-06-26,Idu'l Fitr,Gazetted
+2017-08-15,Independence Day,Gazetted
+2017-08-15,Janmashtarni (Vaishnav),Gazetted
+2017-09-02,Id-ul-Zuha(Bakrid),Gazetted
+2017-09-30,Dussehra,Gazetted
+2017-10-01,Muharram/Ashura,Gazetted
+2017-10-02,Mahatma Gandhi Jayanti,Gazetted
+2017-10-19,Diwali (Deepavali),Gazetted
+2017-11-04,Guru Nanak's Birthday,Gazetted
+2017-12-02,Milad-un-Nabi or Id-e- Milad (birthday of Prophet Mohammad),Gazetted
+2017-12-25,Christmas Day,Gazetted
+2018-01-01,New Year's Day (R),Restricted
+2018-01-14,Makar Sankranti (R),Restricted
+2018-01-22,Basant Panchami / Sri Panchami (R),Restricted
+2018-01-26,Republic Day,Gazetted
+2018-01-31,Guru Ravidas's Birthday (R),Restricted
+2018-02-10,Swami Dayananda Saraswati Jayanti (R),Restricted
+2018-02-14,Maha Shivaratri,Restricted
+2018-02-19,Shivaji Jayanti (R),Restricted
+2018-03-01,Holika Dahan/Dolyatra (R),Restricted
+2018-03-02,Holi,Gazetted
+2018-03-18,Chaitra Sukladi/Gudi Padava/Ugadi/Cheti Chand (R),Restricted
+2018-03-25,Ram Navami (R),Restricted
+2018-03-29,Mahavir Jayanti,Gazetted
+2018-03-30,Good Friday,Gazetted
+2018-04-01,Easter Sunday (R),Restricted
+2018-04-14,Vaisakhi/Vishu/Mesadi (R),Restricted
+2018-04-15,Vaisakhadi(Bengal)/Bahag Bihu (Assam) (R),Restricted
+2018-04-30,Buddha Purnima,Gazetted
+2018-05-09,Guru Rabindranath's Birthday (R),Restricted
+2018-06-15,Jamat-Ul-Vida (R),Restricted
+2018-06-16,Idu'l Fitr,Gazetted
+2018-07-14,Rath Yatra (R),Restricted
+2018-08-15,Independence day,Gazetted
+2018-08-17,Parsi New Year's day/Nauraj (R),Restricted
+2018-08-22,Id-ul-Zuha (Bakrid),Gazetted
+2018-08-25,Onam or Thiru Onam Day (R),Restricted
+2018-08-26,Raksha Bandhan (R),Restricted
+2018-09-03,Janmashtami,Gazetted
+2018-09-13,Vinayaka Chaturthi/Ganesh Chaturthi (R),Restricted
+2018-09-21,Muharram,Gazetted
+2018-10-02,Mahatma Gandhi's Birthday,Gazetted
+2018-10-16,Dussehra (Maha Saptami) (Additional) (R),Restricted
+2018-10-17,Dussehra (Maha Ashtami) (Additional) (R),Restricted
+2018-10-18,Dussehra (Maha Navmi) (R),Restricted
+2018-10-19,Dussehra,Gazetted
+2018-10-24,Maharishi Valmiki's Birthday (R),Restricted
+2018-10-27,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2018-11-06,Deepavali (South India) (R),Restricted
+2018-11-07,Diwali (Deepavali),Gazetted
+2018-11-08,Govardhan Puja (R),Restricted
+2018-11-09,Bhai Duj (R),Restricted
+2018-11-13,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2018-11-21,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2018-11-23,Gur'u Nanak's Birthday,Gazetted
+2018-11-24,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2018-12-24,Christmas Eve (R),Restricted
+2018-12-25,Christmas Day,Gazetted
+2019-01-01,New Year's Day (R),Restricted
+2019-01-13,Guru Gobind Singh's Birthday (R),Restricted
+2019-01-14,Makar Sankranti (R),Restricted
+2019-01-15,Pongal (R),Restricted
+2019-01-26,Republic Day,Gazetted
+2019-02-10,Basant Panchami / Sri Panchami (R),Restricted
+2019-02-19,Guru Ravidas's Birthday (R),Restricted
+2019-03-01,Swami Dayananda Saraswati Jayanti (R),Restricted
+2019-03-04,Maha Shivaratri,Gazetted
+2019-03-20,Holika Dahan (R),Restricted
+2019-03-21,Dolyatra (R),Restricted
+2019-04-06,Chaitra Sukladi/ Gudi Padava/ Ugadi/ Cheti Chand (R),Restricted
+2019-04-13,Ram Navami (Smarta) (R),Restricted
+2019-04-14,Vaisakhi/ Vishu/ Mesadi (R),Restricted
+2019-04-15,Vaisakhadi (Bengal)/ Bahag Bihu (Assam) (R),Restricted
+2019-04-17,Mahavir Jayanti,Gazetted
+2019-04-19,Good Friday,Gazetted
+2019-04-21,Easter Sunday (R),Restricted
+2019-05-09,Guru Rabindranath's Birthday (R),Restricted
+2019-05-18,Buddha Purnima,Gazetted
+2019-05-31,Jamat-Ul-Vida (R),Restricted
+2019-06-05,Id-ul- Fitr,Gazetted
+2019-07-04,Rath Yatra (R),Restricted
+2019-08-12,Id-ul-Zuha (Bakrid),Gazetted
+2019-08-15,Raksha Bandhan (R),Restricted
+2019-08-17,Parsi New Year's day/ Nauraj (R),Restricted
+2019-08-24,Janmashtami,Gazetted
+2019-09-02,Vinayaka Chaturthi/ Ganesh Chaturthi (R),Restricted
+2019-09-10,Muharram,Gazetted
+2019-09-11,Onam or Thiru Onam Day (R),Restricted
+2019-10-02,Mahatma Gandhi's Birthday,Gazetted
+2019-10-05,Dussehra (Maha Saptami) (Additional) (R),Restricted
+2019-10-06,Dussehra (Maha Ashtami) (Additional) (R),Restricted
+2019-10-07,Dussehra (Maha Navmi) (R),Restricted
+2019-10-08,Dussehra,Gazetted
+2019-10-13,Maharishi Valmiki's Birthday (R),Restricted
+2019-10-17,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2019-10-27,Naraka Chaturdasi (R),Restricted
+2019-10-28,Govardhan Puja (R),Restricted
+2019-10-29,Bhai Duj (R),Restricted
+2019-11-02,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2019-11-10,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2019-11-12,Guru Nanak's Birthday,Gazetted
+2019-11-24,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2019-12-24,Christmas Eve (R),Restricted
+2019-12-25,Christmas Day,Gazetted
+2020-01-01,New Year's Day (R),Restricted
+2020-01-02,Guru Gobind Singh's Birthday (R),Restricted
+2020-01-13,Lohri (R),Restricted
+2020-01-15,Makar Sankranti/Pongal (R),Restricted
+2020-01-26,Republic Day,Gazetted
+2020-01-30,Basant Panchami / Sri Panchami (R),Restricted
+2020-02-09,Guru Ravidas's Birthday (R),Restricted
+2020-02-18,Swami Dayananda Saraswati Jayanti (R),Restricted
+2020-02-19,Shivaji Jayanti (R),Restricted
+2020-02-21,Maha Shivaratri (R),Restricted
+2020-03-09,Holika Dahan/Dolyatra/Hazarat Ali's Birthday (R),Restricted
+2020-03-10,Holi,Gazetted
+2020-03-25,Chaitra Sukladi/Gudi Padava/Ugadi/Cheti Chand (R),Restricted
+2020-04-02,Ram Navami,Gazetted
+2020-04-06,Mahavir Jayanti,Gazetted
+2020-04-10,Good Friday,Gazetted
+2020-04-12,Easter Sunday (R),Restricted
+2020-04-13,Vaisakhi/Vishu (R),Restricted
+2020-04-14,Mesadi/Vaisakhadi (Bengal)/Bahag Bihu (Assam) (R),Restricted
+2020-05-07,Buddha Purnima,Gazetted
+2020-05-08,Guru Rabindranath's Birthday (R),Restricted
+2020-05-22,Jamat-Ul-Vida (R),Restricted
+2020-05-25,Id-ul- Fitr,Gazetted
+2020-06-23,Rath Yatra (R),Restricted
+2020-08-01,Id-ul-Zuha (Bakrid),Gazetted
+2020-08-03,Raksha Bandhan (R),Restricted
+2020-08-11,Janmashtami (Smarta) (R),Restricted
+2020-08-12,Janmashtami,Gazetted
+2020-08-15,Independence day,Gazetted
+2020-08-16,Parsi New Year's day/ Nauraj (R),Restricted
+2020-08-22,Vinayaka Chaturthi/Ganesh Chaturthi (R),Restricted
+2020-08-30,Muharram,Gazetted
+2020-08-31,Onam or Thiru Onam Day (R),Restricted
+2020-10-02,Mahatma Gandhi's Birthday,Gazetted
+2020-10-23,Dussehra (Maha Saptami) (Additional) (R),Restricted
+2020-10-24,Dussehra (Maha Ashtami) (Maha Navmi) (Additional) (R),Restricted
+2020-10-25,Dussehra,Gazetted
+2020-10-26,"Vijay Dashmi (Bengal, Kerala) (R)",Restricted
+2020-10-30,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2020-10-31,Maharishi Valmiki's Birthday (R),Restricted
+2020-11-04,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2020-11-14,Naraka Chaturdasi (R),Restricted
+2020-11-15,Govardhan Puja (R),Restricted
+2020-11-16,Bhai Duj (R),Restricted
+2020-11-20,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2020-11-24,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2020-11-30,Guru Nanak's Birthday,Gazetted
+2020-12-24,Christmas Eve (R),Restricted
+2020-12-25,Christmas Day,Gazetted
+2021-01-01,New Year's Day (R),Restricted
+2021-01-13,Lohri (R),Restricted
+2021-01-14,Makar Sankranti/Pongal (R),Restricted
+2021-01-20,Guru Gobind Singh's Birthday (R),Restricted
+2021-01-26,Republic Day,Gazetted
+2021-02-16,Basant Panchami / Sri Panchami (R),Restricted
+2021-02-19,Shivaji Jayanti (R),Restricted
+2021-02-26,Hazarat Ali's Birthday (R),Restricted
+2021-02-27,Guru Ravidas's Birthday (R),Restricted
+2021-03-08,Swami Dayananda Saraswati Jayanti (R),Restricted
+2021-03-11,Maha Shivaratri (R),Restricted
+2021-03-28,Holika Dahan/Dolyatra (R),Restricted
+2021-03-29,Holi,Gazetted
+2021-04-02,Good Friday,Gazetted
+2021-04-04,Easter Sunday (R),Restricted
+2021-04-13,Chaitra Sukladi/ Gudi Padava/ Ugadi/Cheti Chand/ Vaisakhi/ Vishu (R),Restricted
+2021-04-14,Mesadi Tamil New Year's Day (R),Restricted
+2021-04-15,Vaisakhadi (Bengal)/ Bahag Bihu (Assam) (R),Restricted
+2021-04-21,Ram Navami,Gazetted
+2021-04-25,Mahavir Jayanti,Gazetted
+2021-05-07,Jamat-Ul-Vida (R),Restricted
+2021-05-09,Guru Rabindranath's Birthday (R),Restricted
+2021-05-14,Id-ul- Fitr,Gazetted
+2021-05-26,Buddha Purnima,Gazetted
+2021-07-12,Rath Yatra (R),Restricted
+2021-07-21,Id-ul-Zuha (Bakrid),Gazetted
+2021-08-15,Independence day,Gazetted
+2021-08-16,Parsi New Year's day/ Nauraj (R),Restricted
+2021-08-19,Muharram,Gazetted
+2021-08-21,Onam or Thiru Onam Day (R),Restricted
+2021-08-22,Raksha Bandhan (R),Restricted
+2021-08-30,Janmashtami (Smarta) (R),Restricted
+2021-09-10,Vinayaka Chaturthi/ Ganesh Chaturthi (R),Restricted
+2021-10-02,Mahatma Gandhi's Birthday,Gazetted
+2021-10-12,Dussehra (Maha Saptami) (R),Restricted
+2021-10-13,Dussehra (Maha Ashtami) (R),Restricted
+2021-10-14,Dussehra (Maha Navmi) (R),Restricted
+2021-10-15,Dussehra,Gazetted
+2021-10-19,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2021-10-20,Maharishi Valmiki's Birthday (R),Restricted
+2021-10-24,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2021-11-04,Naraka Chaturdasi (R),Restricted
+2021-11-05,Govardhan Puja (R),Restricted
+2021-11-06,Bhai Duj (R),Restricted
+2021-11-10,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2021-11-19,Guru Nanak's Birthday,Gazetted
+2021-11-24,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2021-12-24,Christmas Eve (R),Restricted
+2021-12-25,Christmas Day,Gazetted
+2022-01-01,New Year's Day,Restricted
+2022-01-09,Guru Govind Singh's Birthday,Restricted
+2022-01-13,Lohri,Restricted
+2022-01-14,Makar Sankranti / Pongal,Restricted
+2022-01-26,Republic Day,Gazetted
+2022-02-05,Basant Panchami/Sri Panchami,Restricted
+2022-02-16,Guru Ravidas's Birthday,Restricted
+2022-02-19,Shivaji Jayanti,Restricted
+2022-02-26,Swami Dayananda Saraswati Jayanti,Restricted
+2022-03-01,Maha Shivaratri,Restricted
+2022-03-17,Holika Dahana / Hazarat Ali's Birthday,Restricted
+2022-03-18,Holi,Gazetted
+2022-04-02,Chaitra Sukladi/Gudi Padava/Ugadi/Cheti Chand,Restricted
+2022-04-10,Ram Navami,Gazetted
+2022-04-14,Mahavir Jayanti,Gazetted
+2022-04-15,Good Friday,Gazetted
+2022-04-17,Easter Day,Restricted
+2022-04-29,Jamat Ul-Vida,Restricted
+2022-05-03,Idu'l Fitr,Gazetted
+2022-05-09,Guru Rabindranath's birthday,Restricted
+2022-05-16,Buddha Purnima,Gazetted
+2022-07-01,Rath Yatra,Restricted
+2022-07-10,Id-ul-Zuha(Bakrid),Gazetted
+2022-08-09,Muharram,Gazetted
+2022-08-11,Raksha Bandhan(Rakhi),Restricted
+2022-08-15,Independence Day,Gazetted
+2022-08-16,Parsi New Year's day/Nauraj,Restricted
+2022-08-18,Janmashtami (Smarta),Restricted
+2022-08-19,Janmashtami,Gazetted
+2022-08-31,Vinayaka Chaturthi /Ganesh Chaturthi,Restricted
+2022-09-08,Onam or Thiru onam day,Restricted
+2022-10-02,Mahatma Gandhi Jayanti,Gazetted
+2022-10-03,Dussehra (Maha Ashtami),Restricted
+2022-10-04,Dussehra (Maha Navmi),Restricted
+2022-10-05,Dussehra,Gazetted
+2022-10-09,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2022-10-13,Karaka Chaturthi (Karva Chouth),Restricted
+2022-10-24,Diwali (Deepavali),Gazetted
+2022-10-25,Govardhan Puja,Restricted
+2022-10-26,Bhai Duj,Restricted
+2022-10-30,Pratihar Sashthi or Surya Sashthi (Chhat Puja),Restricted
+2022-11-08,Guru Nanak's Birthday,Gazetted
+2022-11-24,Guru Teg Bahadur's Martyrdom Day,Restricted
+2022-12-24,Christmas Eve,Restricted
+2022-12-25,Christmas Day,Gazetted
+2022-12-29,Guru Gobind Singh's Birthday,Restricted
+2023-01-01,New Year's Day,Restricted
+2023-01-13,Lohri,Restricted
+2023-01-14,Makar Sankranti / Pongal,Restricted
+2023-01-20,Guru Govind Singh's Birthday,Restricted
+2023-01-26,Republic Day,Gazetted
+2023-01-26,Vasant Panchami/Sri Panchami,Restricted
+2023-02-05,Guru Ravidas's Birthday,Restricted
+2023-02-15,Swami Dayananda Saraswati Jayanti,Restricted
+2023-02-18,Maha Shivaratri,Restricted
+2023-02-19,Shivaji Jayanti,Restricted
+2023-03-07,Holika Dahana,Restricted
+2023-03-08,Holi,Gazetted
+2023-03-30,Ram Navami,Gazetted
+2023-04-04,Mahavir Jayanti,Gazetted
+2023-04-07,Good Friday,Gazetted
+2023-04-09,Easter Day,Restricted
+2023-04-21,Jamat Ul-Vida,Restricted
+2023-04-23,Idu'l Fitr,Gazetted
+2023-05-05,Buddha Purnima,Gazetted
+2023-05-09,Guru Rabindranath's birthday,Restricted
+2023-06-20,Rath Yatra,Restricted
+2023-06-29,Id-ul-Zuha(Bakrid),Gazetted
+2023-07-29,Muharram,Gazetted
+2023-08-15,Independence Day,Gazetted
+2023-08-16,Parsi New Year's day,Restricted
+2023-08-31,Raksha Bandhan(Rakhi),Restricted
+2023-09-07,Janmashtami,Gazetted
+2023-09-19,Vinayaka Chaturthi /Ganesh Chaturthi,Restricted
+2023-08-28,Onam or Thiru onam day,Restricted
+2023-10-02,Mahatma Gandhi Jayanti,Gazetted
+2023-10-22,Dussehra (Maha Ashtami),Restricted
+2023-10-23,Dussehra (Maha Navmi),Restricted
+2023-10-24,Dussehra,Gazetted
+2023-10-27,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2023-10-31,Karaka Chaturthi (Karva Chouth),Restricted
+2023-11-12,Diwali (Deepavali),Gazetted
+2023-11-13,Govardhan Puja,Restricted
+2023-11-14,Bhai Duj,Restricted
+2023-11-19,Pratihar Sashthi or Surya Sashthi (Chhat Puja),Restricted
+2023-11-27,Guru Nanak's Birthday,Gazetted
+2023-12-17,Guru Teg Bahadur's Martyrdom Day,Restricted
+2023-12-24,Christmas Eve,Restricted
+2023-12-25,Christmas Day,Gazetted
+2024-01-01,New Year's Day,Restricted
+2024-01-13,Lohri,Restricted
+2024-01-14,Makar Sankranti / Pongal,Restricted
+2024-01-17,Guru Govind Singh's Birthday,Restricted
+2024-01-26,Republic Day,Gazetted
+2024-02-14,Vasant Panchami/Sri Panchami,Restricted
+2024-02-19,Shivaji Jayanti,Restricted
+2024-02-24,Guru Ravidas's Birthday,Restricted
+2024-03-05,Swami Dayananda Saraswati Jayanti,Restricted
+2024-03-08,Maha Shivaratri,Restricted
+2024-03-24,Holika Dahana,Restricted
+2024-03-25,Holi,Gazetted
+2024-03-29,Good Friday,Gazetted
+2024-03-31,Easter Day,Restricted
+2024-04-05,Jumat-ul-Wida,Restricted
+2024-04-10,Idul Fitr,Gazetted
+2024-04-17,Ram Navami,Gazetted

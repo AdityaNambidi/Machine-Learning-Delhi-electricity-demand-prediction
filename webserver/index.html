@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Load Management Dashboard</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Electric Demand Projection of Delhi</h1>
+        </header>
+        <div class ="search_bar" >
+            <div class="search_logo">
+                <h1>Submit Date and Time</h1>
+                <form id="dateTimeForm">
+                    <label for="date">Select Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <br><br>
+                    
+                    <label for="time">Select Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    <br><br>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <h2>Response:</h2>
+        <div id="result"></div>
+        <main>
+            <section id="real-time-load">
+                <h2>Pridected Chart</h2>
+                <canvas id="loadChart"></canvas>
+            </section>
+            <section id="ai-predictions">
+                <h2>Wind Speed</h2>
+                <canvas id="predictionChart"></canvas>
+            </section>
+            <section id="weather-influence">
+                <h2>Temperature</h2>
+                <canvas id="weatherChart"></canvas>
+            </section>
+            <section>
+                <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=76.39617919921876%2C28.283823966106382%2C77.44812011718751%2C29.00213512458362&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/28.6436/76.9221">View Larger Map</a></small>
+            </section>
+            <section id="alerts">
+                <h2>Peak Load Alerts</h2>
+                <ul id="alertList">
+                    <li>No alerts</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Power Load Management System</p>
+        </footer>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#dateTimeForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent form from refreshing the page
+
+                var date = $('#date').val();
+                var time = $('#time').val();
+
+                $.ajax({
+                    url: '/process',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ date: date, time: time }),
+                    success: function(response) {
+                        $('#result').html('<p>Date: ' + date + '</p><p>Time: ' + time + '</p><p>Model Output: ' + response.result + '</p>');
+                    },
+                    error: function(error) {
+                        $('#result').html('<p>Error: ' + error.responseText + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

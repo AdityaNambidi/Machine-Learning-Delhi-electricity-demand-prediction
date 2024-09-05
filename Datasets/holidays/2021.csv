@@ -1,0 +1,50 @@
+date,day,holiday,holiday_type
+2021-01-01,Friday,New Year's Day (R),Restricted
+2021-01-13,Wednesday,Lohri (R),Restricted
+2021-01-14,Thursday,Makar Sankranti/Pongal (R),Restricted
+2021-01-20,Wednesday,Guru Gobind Singh's Birthday (R),Restricted
+2021-01-26,Tuesday,Republic Day,Gazetted
+2021-02-16,Tuesday,Basant Panchami / Sri Panchami (R),Restricted
+2021-02-19,Friday,Shivaji Jayanti (R),Restricted
+2021-02-26,Friday,Hazarat Ali's Birthday (R),Restricted
+2021-02-27,Saturday,Guru Ravidas's Birthday (R),Restricted
+2021-03-08,Monday,Swami Dayananda Saraswati Jayanti (R),Restricted
+2021-03-11,Thursday,Maha Shivaratri (R),Restricted
+2021-03-28,Sunday,Holika Dahan/Dolyatra (R),Restricted
+2021-03-29,Monday,Holi,Gazetted
+2021-04-02,Friday,Good Friday,Gazetted
+2021-04-04,Sunday,Easter Sunday (R),Restricted
+2021-04-13,Tuesday,Chaitra Sukladi/ Gudi Padava/ Ugadi/Cheti Chand/ Vaisakhi/ Vishu (R),Restricted
+2021-04-14,Wednesday,Mesadi Tamil New Year's Day (R),Restricted
+2021-04-15,Thursday,Vaisakhadi (Bengal)/ Bahag Bihu (Assam) (R),Restricted
+2021-04-21,Wednesday,Ram Navami,Gazetted
+2021-04-25,Sunday,Mahavir Jayanti,Gazetted
+2021-05-07,Friday,Jamat-Ul-Vida (R),Restricted
+2021-05-09,Sunday,Guru Rabindranath's Birthday (R),Restricted
+2021-05-14,Friday,Id-ul- Fitr,Gazetted
+2021-05-26,Wednesday,Buddha Purnima,Gazetted
+2021-07-12,Monday,Rath Yatra (R),Restricted
+2021-07-21,Wednesday,Id-ul-Zuha (Bakrid),Gazetted
+2021-08-15,Sunday,Independence day,Gazetted
+2021-08-16,Monday,Parsi New Year's day/ Nauraj (R),Restricted
+2021-08-19,Thursday,Muharram,Gazetted
+2021-08-21,Saturday,Onam or Thiru Onam Day (R),Restricted
+2021-08-22,Sunday,Raksha Bandhan (R),Restricted
+2021-08-30,Monday,Janmashtami (Smarta) (R),Restricted
+2021-09-10,Friday,Vinayaka Chaturthi/ Ganesh Chaturthi (R),Restricted
+2021-10-02,Saturday,Mahatma Gandhi's Birthday,Gazetted
+2021-10-12,Tuesday,Dussehra (Maha Saptami) (R),Restricted
+2021-10-13,Wednesday,Dussehra (Maha Ashtami) (R),Restricted
+2021-10-14,Thursday,Dussehra (Maha Navmi) (R),Restricted
+2021-10-15,Friday,Dussehra,Gazetted
+2021-10-19,Tuesday,Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad),Gazetted
+2021-10-20,Wednesday,Maharishi Valmiki's Birthday (R),Restricted
+2021-10-24,Sunday,Karaka Chaturthi (Karva Chouth) (R),Restricted
+2021-11-04,Thursday,Naraka Chaturdasi (R),Restricted
+2021-11-05,Friday,Govardhan Puja (R),Restricted
+2021-11-06,Saturday,Bhai Duj (R),Restricted
+2021-11-10,Wednesday,Pratihar Sashthi or Surya Sashthi (Chhat Puja) (R),Restricted
+2021-11-19,Friday,Guru Nanak's Birthday,Gazetted
+2021-11-24,Wednesday,Guru Teg Bahadur's Martyrdom Day (R),Restricted
+2021-12-24,Friday,Christmas Eve (R),Restricted
+2021-12-25,Saturday,Christmas Day,Gazetted

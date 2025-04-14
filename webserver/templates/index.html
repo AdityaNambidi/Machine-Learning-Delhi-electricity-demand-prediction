@@ -166,6 +166,7 @@
             </select>
 
             <div class="selected" id="specifictime">
+                <p>Enter a specific Date and time to get the historical electricity usage data or future electricity prediction.</p>
                 <label for="spdate">Select Date:</label>
                 <input type="date" id="spdate" name="date" required>
                 <label for="sptime">Select Time:</label>
@@ -174,6 +175,7 @@
             </div>
 
             <div class="selected" id="Timerange">
+                <p>Select a start date and end date and time to get the electricity usage data on all those selected dates.</p>
                 <label for="sdate">Start Date:</label>
                 <input type="date" id="sdate" name="date" required>
                 <label for="edate">End Date:</label>
@@ -182,8 +184,11 @@
             </div>
 
             <div class="selected" id="nexthour">
+                <p>Get the electricity prediction for the next hour.</p>
                 <button type="submit" id="submitBtn2">Submit</button>
             </div>
+
+            <p>Our Machine Learning model is trained using Random Forest algorithm and has an accurace of 98%. However the model may not be always correct and cannot account for extreme conditions.</p>
         </div>
 
         <h2>Response:</h2>
@@ -304,6 +309,7 @@
                         graph.appendChild(canvas);
 
                         // Append the graph container (div) to the desired location in the DOM
+                        document.getElementById('result').innerHTML = "";
                         document.getElementById('result').appendChild(graph);
                         
                         
@@ -364,6 +370,9 @@
                                 }
                             }
                         });
+                        minmax = document.createElement('p');
+                        minmax.innerHTML = "Maximum Electricity demand in time range selected: " + response.max + "<br>Least electricity demand in range selected: " + response.min
+                        document.getElementById('result').appendChild(minmax);
 
                     } else {
                         document.getElementById('result').innerHTML = 

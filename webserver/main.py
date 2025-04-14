@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
-APIKEY = "ZB4Y226LCUMVPKCCYVZS63SEG"
+APIKEY = "QBPATUPMMJLGGDZN3SWNPE9GW"
 
 
 @app.route("/temp")
@@ -99,12 +99,13 @@ def range_time():
         pervE = result
         preds.append(result)
         days.append(day.day)
-
         _i += 1
+
+    mp = max(preds)
+    lp = min(preds)
+
     
-    print(preds)
-    
-    return jsonify({'result': preds, 'days': days})
+    return jsonify({'result': preds, 'days': days, 'max': mp, 'min': lp})
 
 
 @app.route('/nexthour')
